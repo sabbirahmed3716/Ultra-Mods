@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" >
+<title>Free Fire Hacking Tools</title>
+<style type="text/css">
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+body {
+	background: rgba(100,150,100,0.1);
+}
+
+.summary {
+	padding: 13px;
+	font-size:1.2em;
+	text-align: center;
+	background: teal;
+	color: white;
+	font-weight:normal;
+}
+.card {
+	width:90%;
+	margin:30px auto;
+	background:  #eee;
+	border-radius:7px;
+	border:0px solid rgba(0,0,0,0);
+	overflow:hidden;
+	transition:0.3s; 
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2),0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card:hover{
+	-webkit-transform:scale(1.05);
+	color: #b8f;
+}
+.post-thumbnail {
+	overflow:hidden;
+	max-height: 250px;
+	width: 100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.post-thumbnail img{
+	width:100%;
+	display:block;
+}
+
+.post-title {
+	text-align:center;
+	font-size:14px;
+	line-height: 30px;
+	padding: 25px 10px;
+	color: teal;
+}
+
+.download-link button{
+	width:100%;
+	background:deeppink;
+	padding:10px;
+	font-size:1.2em;
+	text-align:center;
+	border:none;
+	outline:none;
+	transition:0.2s;
+	color:white;
+}
+.download-link button:hover{
+	background:dodgerblue;
+}
+
+
+@media only screen and (min-width: 380px){
+.site-head {
+	flex-direction:column;
+}
+}
+</style>
+</head>
+<body>
+<section include="site-header.html"></section>
+<main class="container" >
+<h2 class="summary" >Latest Mods</h2>
+<div class="" id="posts" >
+	<div class="card">
+		<div class="post-thumbnail" >
+			<img src="logo.jpg" >
+		</div>
+		<div class="post-title" >
+			<h2>Free Fire Location Hack Config File Free Download</h2>
+		</div>
+		<div class="download-link" >
+			<button type="button" id="1" >Download</button>
+		</div>
+	</div>
+	<!-------------------- 
+	    Card Separator 
+	--------------------->
+<div class="card">
+	<div class="post-thumbnail" >
+		<img src="hack.jpg" >
+	</div>
+	<div class="post-title" >
+		<h2>Title</h2>
+	</div>
+	<div class="download-link" >
+		<button type="button" id="2" >Download</button>
+	</div>
+</div>
+</div>
+</main>
+<section include="site-footer.html"></section>
+<script type="text/javascript" src="include.js"></script>
+<script type="text/javascript">
+var downloadBtn = document.querySelectorAll("button[id]");
+var element,file;
+
+
+//Set Download Url For All Download Button//
+
+for(var i=0; i < downloadBtn.length;i++){
+	fileId=eval(includeHtml[i].getAttribute("id") + 1);
+	downloadBtn[i].onclick  = function(){
+	window.location.href = "/download.html?file-id="+fileId;
+}}
+</script>
+<script type="module">
+// Import the functions you need from the SDKs you need
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+   import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+   import { getStorage, ref as sRef} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js";
+    
+
+const firebaseConfig = {
+      apiKey: "AIzaSyBhfsni5uwrV-5LIbor5ZnNxsAIHezhw4w",
+      authDomain: "first-web-project-1698e.firebaseapp.com",
+      databaseURL: "https://first-web-project-1698e-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "first-web-project-1698e",
+      storageBucket: "first-web-project-1698e.appspot.com",
+      messagingSenderId: "583106204629",
+      appId: "1:583106204629:web:f0272b3199230e67c0e35c",
+      measurementId: "G-WMVXDGNTP3"
+ };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase();
+    const storage = getStorage();
+    
+// Get Value From Firebase
+  onValue(ref(db, 'posts/1'), (snapshot) => {
+  const data = snapshot.val()
+  console.log(data)
+  //data.forEach((item)=> {
+  //  console.log(item)
+  //})
+  // ...
+})
+</script>
+</body>
+</html>

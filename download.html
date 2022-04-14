@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sabbir Ahmed Blog</title>
+<style type="text/css">
+* {
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+main {
+background:rgba(0,250,250,0.05);
+padding:0px 10px;
+}
+.post-container {
+border:1px solid rgba(0,0,0,0.2);
+width:100%;
+margin:0px auto;
+overflow:hidden;
+background: white;
+}
+.post-details {
+width:100%;
+padding: 10px;
+background: rgba(100,200,200,0.2);
+border-bottom:1px solid rgba(100,200,200,0.5);
+}
+.post-details a{
+color: grey;
+text-decoration:none;
+}
+.post-details a:hover, .comment:hover{
+color: coral;
+}
+#folder:before, #name:before {
+content:' / ';
+color: #444;
+font-weight:700;
+}
+.time {
+margin-top:10px;
+color:#444;
+}
+.post-content {
+padding:10px;
+color: teal;
+}
+.post-content::first-letter {
+color:red;
+font-size:2rem;
+text-indent: 30px;
+text-align:justify;
+
+letter-spacing:3px;
+}
+html {
+-webkit-user-select: none;
+}
+.like-comment td {
+vertical-align: center;
+}
+.separator{
+width: 10px;
+}
+.like-comment a, .like {
+color: grey;
+text-decoration:none;
+float:right;
+}
+.like-btn {
+font-size:1.5rem;
+color:dodgerblue;
+border:none;
+outline:none;
+background:none;
+transition:color 0.2s, -webkit-transform 0.2s;
+}
+.like-btn:hover {
+color: red;
+-webkit-transform: scale(1.2);
+}
+.author-profile {
+display:flex;
+align-items:center;
+justify-content:space-around;
+padding:10px;
+}
+.author-details {
+width: 60%;
+}
+#bio {
+color:grey;
+}
+#author-name {
+font-size:1.3rem;
+font-weight:bold;
+color:coral;
+margin-bottom: 5px;
+}
+#author-name:hover {
+text-decoration:underline;
+}
+#avatar {
+height:50px;
+width:50px;
+border-radius: 50%;
+border: 1px solid rgba(0,255,0,1);
+overflow:hidden;
+padding:1px;
+}
+#avatar img{
+width:100%;
+border-radius:50%;
+}
+.commenter-details {
+display:flex;
+align-items:center;
+justify-content:flex-start;
+padding:10px;
+}
+
+.commenter-details div{
+margin:5px;
+}
+
+.comment-header{
+width:100%;
+background:teal;
+color:white;
+font-size:1.5rem;
+padding:10px 0px;
+text-align:center;
+}
+.comment {
+color:black;
+margin-left:80px;
+margin-top:-15px;
+font-family:tahoma;
+}
+.download-link button{
+	width:50%;
+	background:deeppink;
+	padding:10px;
+	font-size:1.2em;
+	text-align:center;
+	border:none;
+	outline:none;
+	transition:0.2s;
+	color:white;
+	display: block;
+	margin: auto;
+	margin-bottom: 20px;
+	border-radius: 3px;
+}
+.download-link button:hover{
+	background:dodgerblue;
+}
+.thumbnail {
+	width:100%;
+	margin:0 auto;
+	overflow:hidden;
+	margin-bottom: 10px;
+}
+.thumbnail img {
+	width:100%;
+}
+</style>
+</head>
+<body>
+
+<section include="site-header.html"></section>
+<main>
+<div class="post-container" >
+<div class="post-details" >
+<div class="path" >
+<span><a href="index.html"> Home</a></span><span id="folder" ><a href="#">Folder</a></span><span id="name" ><a href="#"> Name</a></span>
+</div>
+<div class="time">2 hours ago</div>
+</div>
+<div class="thumbnail" >
+<img src="hack.jpg" id="thumbnail" >
+</div>
+<div class="download-link" >
+<button type="button" id="downloadBtn" >Download</button>
+</div>
+<div class="post-content" >
+Emojis For Web.
+If you want any of these emojis displayed in HTML, you can use the decimal (dec) or hexadecimal (hex) reference found in the table below.
+
+Example
+Emojis For Web.
+If you want any of these emojis displayed in HTML, you can use the decimal (dec) or hexadecimal (hex) reference found in the table below.
+
+</div>
+</div>
+<div class="clear"></div> 
+<div class="author-profile">
+<div id="avatar" ><img src="img_avatar2.png" ></div>
+<div class="author-details" >
+<div id="author-name" >Sabbir Ahmed</div>
+<div id="bio" >My Best bio thats none can do or breake</div>
+</div>
+</div>
+<h2 class="comment-header" >Comments</h2>
+<section class="comment-container" >
+<div class="comment-card" >
+<div class="commenter-details" >
+	<div id="avatar">
+	<img src="img_avatar2.png" >
+	</div>
+	 <div>
+	<h4>Sabbir Ahmed</h4>
+	<p style="color: grey;font-size: 0.8rem;" >1hours ago</p>
+	</div>
+</div>
+<div class="comments" >
+<pre>Nice</pre>
+</div>
+</div>
+</section>
+
+
+</main>
+<section include="site-footer.html"></section>
+<script type="text/javascript" src="include.js"></script>
+<script type="text/javascript">
+var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5" ; 
+//window.location.href
+//var urled = new URL(url_string);
+//var c = urled.searchParams.get("c");
+console.log();
+
+var url = ''+window.location;
+var search = url.split('?');
+var id = search[1].split('=');
+alert(id[1])
+for (var i = 0; i < 2; i++) {
+  // var pair = para[i].split('=');
+   alert(p[0]);
+   alert(p[1]);
+} 
+//alert(para.length)
+</script>
+<script type="module">
+// Import the functions you need from the SDKs you need
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+   import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+   import { getStorage, ref as sRef} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-storage.js";
+
+// Initialize Variable
+	var download = document.getElementById("downloadBtn");
+	var thumbnail = document.getElementById("thumbnail");
+	
+const firebaseConfig = {
+      apiKey: "AIzaSyBhfsni5uwrV-5LIbor5ZnNxsAIHezhw4w",
+      authDomain: "first-web-project-1698e.firebaseapp.com",
+      databaseURL: "https://first-web-project-1698e-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "first-web-project-1698e",
+      storageBucket: "first-web-project-1698e.appspot.com",
+      messagingSenderId: "583106204629",
+      appId: "1:583106204629:web:f0272b3199230e67c0e35c",
+      measurementId: "G-WMVXDGNTP3"
+ };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase();
+    const storage = getStorage();
+    
+// Get Value From Firebase
+  onValue(ref(db, 'posts/'+fileId), (snapshot) => {
+  const data = snapshot.val()
+  
+  thumbnail.src = data.thumbnail;
+  download.onclick = function(){
+  	window.location.href = data.downloadUrl;
+  }
+})
+</script>
+</body>
+</html>
