@@ -246,10 +246,10 @@ for (var i = 0; i < 2; i++) {
 	var download = document.getElementById("downloadBtn");
 	var thumbnail = document.getElementById("thumbnail");
 	
-var url = ''+window.location;
-var search = url.split('?');
-var id = search[1].split('=');
-var fileId = id[1];
+
+var url = new URL(window.location.href);
+var searchParams = new URLSearchParams(url.search);
+var fileId = searchParams.get("file-id");
 
 const firebaseConfig = {
       apiKey: "AIzaSyBhfsni5uwrV-5LIbor5ZnNxsAIHezhw4w",
