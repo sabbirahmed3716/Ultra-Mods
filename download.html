@@ -184,43 +184,11 @@ font-family:tahoma;
 <div class="download-link" >
 <button type="button" id="downloadBtn" >Download</button>
 </div>
-<div class="post-content" >
-Emojis For Web.
-If you want any of these emojis displayed in HTML, you can use the decimal (dec) or hexadecimal (hex) reference found in the table below.
-
-Example
-Emojis For Web.
-If you want any of these emojis displayed in HTML, you can use the decimal (dec) or hexadecimal (hex) reference found in the table below.
+<div id="post" class="post-content" >
 
 </div>
 </div>
-<div class="clear"></div> 
-<div class="author-profile">
-<div id="avatar" ><img src="img_avatar2.png" ></div>
-<div class="author-details" >
-<div id="author-name" >Sabbir Ahmed</div>
-<div id="bio" >My Best bio thats none can do or breake</div>
-</div>
-</div>
-<h2 class="comment-header" >Comments</h2>
-<section class="comment-container" >
-<div class="comment-card" >
-<div class="commenter-details" >
-	<div id="avatar">
-	<img src="img_avatar2.png" >
-	</div>
-	 <div>
-	<h4>Sabbir Ahmed</h4>
-	<p style="color: grey;font-size: 0.8rem;" >1hours ago</p>
-	</div>
-</div>
-<div class="comments" >
-<pre>Nice</pre>
-</div>
-</div>
-</section>
-
-
+<div class="clear"></div>
 </main>
 <section include="site-footer.html"></section>
 <script type="text/javascript" src="include.js"></script>
@@ -245,7 +213,7 @@ for (var i = 0; i < 2; i++) {
 // Initialize Variable
 	var download = document.getElementById("downloadBtn");
 	var thumbnail = document.getElementById("thumbnail");
-	
+	var post = document.getElementById("post");
 
 var url = new URL(window.location.href);
 var searchParams = new URLSearchParams(url.search);
@@ -272,10 +240,11 @@ const firebaseConfig = {
   const data = snapshot.val()
   
   thumbnail.src = data.thumbnail;
+post.innerHTML =  data.description;
   download.onclick = function(){
   	window.location.href = data.downloadUrl;
   }})
-alert(fileId)
+
 </script>
 </body>
 </html>
