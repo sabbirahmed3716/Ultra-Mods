@@ -228,9 +228,7 @@ If you want any of these emojis displayed in HTML, you can use the decimal (dec)
 /*
 console.log();
 
-var url = ''+window.location;
-var search = url.split('?');
-var id = search[1].split('=');
+
 for (var i = 0; i < 2; i++) {
   // var pair = para[i].split('=');
    alert(p[0]);
@@ -248,9 +246,10 @@ for (var i = 0; i < 2; i++) {
 	var download = document.getElementById("downloadBtn");
 	var thumbnail = document.getElementById("thumbnail");
 	
-var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5" ; 
-var newUrl= new URL(url_string);
-var fileId = newUrl.searchParams.get("file-id");
+var url = ''+window.location;
+var search = url.split('?');
+var id = search[1].split('=');
+var fileId = id[1];
 
 const firebaseConfig = {
       apiKey: "AIzaSyBhfsni5uwrV-5LIbor5ZnNxsAIHezhw4w",
